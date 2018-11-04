@@ -8,22 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		BC73C1F0218D29D300484A4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73C1EF218D29D300484A4E /* AppDelegate.swift */; };
-		BC73C1F2218D29D300484A4E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73C1F1218D29D300484A4E /* FirstViewController.swift */; };
-		BC73C1F4218D29D300484A4E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73C1F3218D29D300484A4E /* SecondViewController.swift */; };
+		BC73C1F2218D29D300484A4E /* ARVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73C1F1218D29D300484A4E /* ARVideoController.swift */; };
+		BC73C1F4218D29D300484A4E /* UploadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73C1F3218D29D300484A4E /* UploadController.swift */; };
 		BC73C1F7218D29D300484A4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC73C1F5218D29D300484A4E /* Main.storyboard */; };
 		BC73C1F9218D29D300484A4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC73C1F8218D29D300484A4E /* Assets.xcassets */; };
 		BC73C1FC218D29D400484A4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC73C1FA218D29D400484A4E /* LaunchScreen.storyboard */; };
+		BC73C204218D2C7600484A4E /* RootTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73C203218D2C7600484A4E /* RootTabController.swift */; };
+		BC73C208218D2D1000484A4E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73C207218D2D1000484A4E /* LoginController.swift */; };
+		BC73C20B218D308200484A4E /* App_Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73C20A218D308200484A4E /* App_Constants.swift */; };
+		BC73C20E218D329200484A4E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73C20D218D329200484A4E /* Helper.swift */; };
+		BC73C230218D3FAE00484A4E /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BC73C22F218D3FAE00484A4E /* art.scnassets */; };
+		BC73C232218D56A300484A4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC73C231218D56A300484A4E /* GoogleService-Info.plist */; };
+		BCC1E580218D893F003C2276 /* DownloadAssestsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1E57F218D893F003C2276 /* DownloadAssestsController.swift */; };
+		DAC6AF5E0733E41566B9CF02 /* Pods_VideoAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB10E78B2927870CE4B9A4D /* Pods_VideoAR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90673881C78406F8D1E70B3A /* Pods-VideoAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoAR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoAR/Pods-VideoAR.debug.xcconfig"; sourceTree = "<group>"; };
+		B1D3C075D8634594DF380ACD /* Pods-VideoAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoAR/Pods-VideoAR.release.xcconfig"; sourceTree = "<group>"; };
 		BC73C1EC218D29D300484A4E /* VideoAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC73C1EF218D29D300484A4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC73C1F1218D29D300484A4E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		BC73C1F3218D29D300484A4E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BC73C1F1218D29D300484A4E /* ARVideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARVideoController.swift; sourceTree = "<group>"; };
+		BC73C1F3218D29D300484A4E /* UploadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadController.swift; sourceTree = "<group>"; };
 		BC73C1F6218D29D300484A4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC73C1F8218D29D300484A4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC73C1FB218D29D400484A4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC73C1FD218D29D400484A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC73C203218D2C7600484A4E /* RootTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabController.swift; sourceTree = "<group>"; };
+		BC73C207218D2D1000484A4E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		BC73C20A218D308200484A4E /* App_Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_Constants.swift; sourceTree = "<group>"; };
+		BC73C20D218D329200484A4E /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		BC73C22F218D3FAE00484A4E /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		BC73C231218D56A300484A4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BCC1E57F218D893F003C2276 /* DownloadAssestsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadAssestsController.swift; sourceTree = "<group>"; };
+		FCB10E78B2927870CE4B9A4D /* Pods_VideoAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC6AF5E0733E41566B9CF02 /* Pods_VideoAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75F4C74A1EA575E8AA4F237D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90673881C78406F8D1E70B3A /* Pods-VideoAR.debug.xcconfig */,
+				B1D3C075D8634594DF380ACD /* Pods-VideoAR.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF718F2695B77E4293779964 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCB10E78B2927870CE4B9A4D /* Pods_VideoAR.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BC73C1E3218D29D200484A4E = {
 			isa = PBXGroup;
 			children = (
 				BC73C1EE218D29D300484A4E /* VideoAR */,
 				BC73C1ED218D29D300484A4E /* Products */,
+				75F4C74A1EA575E8AA4F237D /* Pods */,
+				AF718F2695B77E4293779964 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +94,79 @@
 		BC73C1EE218D29D300484A4E /* VideoAR */ = {
 			isa = PBXGroup;
 			children = (
+				BC73C20C218D328400484A4E /* Helpers */,
+				BC73C209218D306D00484A4E /* Constants */,
+				BC73C206218D2CFC00484A4E /* Login */,
+				BC73C205218D2C7D00484A4E /* RootTabBar */,
+				BCC1E581218DA317003C2276 /* ARScreen */,
+				BCC1E582218DA32D003C2276 /* Upload */,
+				BCC1E583218DA339003C2276 /* DownloadAssests */,
 				BC73C1EF218D29D300484A4E /* AppDelegate.swift */,
-				BC73C1F1218D29D300484A4E /* FirstViewController.swift */,
-				BC73C1F3218D29D300484A4E /* SecondViewController.swift */,
 				BC73C1F5218D29D300484A4E /* Main.storyboard */,
 				BC73C1F8218D29D300484A4E /* Assets.xcassets */,
+				BC73C22F218D3FAE00484A4E /* art.scnassets */,
 				BC73C1FA218D29D400484A4E /* LaunchScreen.storyboard */,
 				BC73C1FD218D29D400484A4E /* Info.plist */,
+				BC73C231218D56A300484A4E /* GoogleService-Info.plist */,
 			);
 			path = VideoAR;
+			sourceTree = "<group>";
+		};
+		BC73C205218D2C7D00484A4E /* RootTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				BC73C203218D2C7600484A4E /* RootTabController.swift */,
+			);
+			name = RootTabBar;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		BC73C206218D2CFC00484A4E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BC73C207218D2D1000484A4E /* LoginController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BC73C209218D306D00484A4E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BC73C20A218D308200484A4E /* App_Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		BC73C20C218D328400484A4E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BC73C20D218D329200484A4E /* Helper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BCC1E581218DA317003C2276 /* ARScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BC73C1F1218D29D300484A4E /* ARVideoController.swift */,
+			);
+			path = ARScreen;
+			sourceTree = "<group>";
+		};
+		BCC1E582218DA32D003C2276 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				BC73C1F3218D29D300484A4E /* UploadController.swift */,
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
+		BCC1E583218DA339003C2276 /* DownloadAssests */ = {
+			isa = PBXGroup;
+			children = (
+				BCC1E57F218D893F003C2276 /* DownloadAssestsController.swift */,
+			);
+			path = DownloadAssests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC73C200218D29D400484A4E /* Build configuration list for PBXNativeTarget "VideoAR" */;
 			buildPhases = (
+				FEF600854DD407E9F16448EA /* [CP] Check Pods Manifest.lock */,
 				BC73C1E8218D29D300484A4E /* Sources */,
 				BC73C1E9218D29D300484A4E /* Frameworks */,
 				BC73C1EA218D29D300484A4E /* Resources */,
+				A2ECA5D3511966EC3CAB53E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +230,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC73C1FC218D29D400484A4E /* LaunchScreen.storyboard in Resources */,
+				BC73C230218D3FAE00484A4E /* art.scnassets in Resources */,
+				BC73C232218D56A300484A4E /* GoogleService-Info.plist in Resources */,
 				BC73C1F9218D29D300484A4E /* Assets.xcassets in Resources */,
 				BC73C1F7218D29D300484A4E /* Main.storyboard in Resources */,
 			);
@@ -133,14 +239,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A2ECA5D3511966EC3CAB53E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VideoAR/Pods-VideoAR-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
+				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
+				"${BUILT_PRODUCTS_DIR}/YPImagePicker/YPImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoAR/Pods-VideoAR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEF600854DD407E9F16448EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VideoAR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC73C1E8218D29D300484A4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC73C1F4218D29D300484A4E /* SecondViewController.swift in Sources */,
+				BC73C1F4218D29D300484A4E /* UploadController.swift in Sources */,
+				BC73C20E218D329200484A4E /* Helper.swift in Sources */,
+				BC73C20B218D308200484A4E /* App_Constants.swift in Sources */,
+				BC73C208218D2D1000484A4E /* LoginController.swift in Sources */,
+				BC73C204218D2C7600484A4E /* RootTabController.swift in Sources */,
 				BC73C1F0218D29D300484A4E /* AppDelegate.swift in Sources */,
-				BC73C1F2218D29D300484A4E /* FirstViewController.swift in Sources */,
+				BCC1E580218D893F003C2276 /* DownloadAssestsController.swift in Sources */,
+				BC73C1F2218D29D300484A4E /* ARVideoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +462,7 @@
 		};
 		BC73C201218D29D400484A4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90673881C78406F8D1E70B3A /* Pods-VideoAR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +481,7 @@
 		};
 		BC73C202218D29D400484A4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1D3C075D8634594DF380ACD /* Pods-VideoAR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
