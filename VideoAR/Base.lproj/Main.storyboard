@@ -85,7 +85,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otT-n5-Bmu">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otT-n5-Bmu">
                                                 <rect key="frame" x="183.5" y="0.0" width="143.5" height="30"/>
                                                 <state key="normal" title="Upload"/>
                                                 <connections>
@@ -116,6 +116,7 @@
                     <tabBarItem key="tabBarItem" title="Upload" image="second" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="imageCheck" destination="NLh-Ix-DlP" id="VGV-cq-HtZ"/>
+                        <outlet property="upoadVideoButton" destination="otT-n5-Bmu" id="GTt-UL-nsI"/>
                         <outlet property="videoCheck" destination="MvV-4V-2f7" id="Whb-tx-bqQ"/>
                     </connections>
                 </viewController>

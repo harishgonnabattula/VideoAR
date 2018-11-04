@@ -31,5 +31,5 @@ enum MediaType: String {
     case Video
 }
 
-let DELAY_TIME = 3.0
+let DELAY_TIME = 2.0
 

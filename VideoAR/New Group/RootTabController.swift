@@ -14,9 +14,7 @@ class RootTabController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    override func viewDidAppear(_ animated: Bool) {
-    }
-
+    
     @IBAction func logOut(_ sender: Any) {
         
         let firebaseAuth = Auth.auth()

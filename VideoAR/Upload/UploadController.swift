@@ -13,6 +13,7 @@ import Firebase
 
 class UploadController: UIViewController {
 
+    @IBOutlet weak var upoadVideoButton: UIButton!
     @IBOutlet weak var imageCheck: UIImageView!
     @IBOutlet weak var videoCheck: UIImageView!
     lazy var name = Auth.auth().currentUser?.email?.split(separator: "@").first
@@ -32,6 +33,7 @@ class UploadController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         view.viewWithTag(99)?.isHidden = true
         view.viewWithTag(100)?.isHidden = true
+        self.upoadVideoButton.isEnabled = false
     }
     
     @IBAction func imageUpload(_ sender: UIButton) {
@@ -125,6 +127,7 @@ extension UploadController {
             let uploadTask = markerRef.putData(data, metadata: nil)
             uploadTask.observe(StorageTaskStatus.success, handler: { (snapshot) in
                 hud.dismiss()
+                self.upoadVideoButton.isEnabled = true
                 print("#############  Media Upload Success   #############")
             })
         }
