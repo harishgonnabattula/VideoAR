@@ -11,6 +11,7 @@ import Foundation
 
 enum StoryBoardIDs: String {
     case LOGIN = "Login"
+    case ROOT = "RootTab"
 }
 
 enum LoginStatusCodes {

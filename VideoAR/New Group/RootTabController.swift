@@ -15,7 +15,6 @@ class RootTabController: UITabBarController {
         super.viewDidLoad()
     }
     override func viewDidAppear(_ animated: Bool) {
-        checkAuthorization()
     }
 
     @IBAction func logOut(_ sender: Any) {
@@ -24,16 +23,10 @@ class RootTabController: UITabBarController {
         do {
             try firebaseAuth.signOut()
             self.selectedIndex = 0
-            checkAuthorization()
+            AuthenticationHelper.loadVC()
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
         
-    }
-    
-    private func checkAuthorization() {
-        if Auth.auth().currentUser == nil{
-            self.present(Helper.getViewControllerBy(id: StoryBoardIDs.LOGIN), animated: true, completion: nil)
-        }
     }
 }

@@ -132,7 +132,7 @@ extension LoginController {
                 if let err = err {
                     print("Error adding document: \(err)")
                 } else {
-                    self.dismiss(animated: true, completion: nil)
+                    AuthenticationHelper.loadVC()
                 }
             }
     }

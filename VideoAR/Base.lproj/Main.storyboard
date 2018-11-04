@@ -230,7 +230,7 @@
         <!--Navigation Controller-->
         <scene sceneID="z5y-8y-320">
             <objects>
-                <navigationController id="XZ2-Ep-F5f" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootTab" id="XZ2-Ep-F5f" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3q9-pP-3g1">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -244,7 +244,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YRh-Dc-JGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1098" y="0.0"/>
+            <point key="canvasLocation" x="-1391" y="0.0"/>
         </scene>
         <!--ARVideo-->
         <scene sceneID="yl2-sM-qoP">

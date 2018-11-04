@@ -8,6 +8,7 @@
 
 import UIKit
 import JGProgressHUD
+import Firebase
 
 struct Helper {
     static func getViewControllerBy(id: StoryBoardIDs) -> UIViewController {
@@ -50,5 +51,22 @@ struct Assests {
     }
     static func getVidUrl() -> URL? {
         return defaults.url(forKey: "markerVid")
+    }
+}
+
+struct AuthenticationHelper {
+    
+    private static func checkAuthorization() -> Bool{
+        return !(Auth.auth().currentUser == nil)
+    }
+    static func loadVC() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        if !checkAuthorization() {
+            appDelegate.window?.rootViewController = Helper.getViewControllerBy(id: StoryBoardIDs.LOGIN)
+        }
+        else{
+            appDelegate.window?.rootViewController = Helper.getViewControllerBy(id: StoryBoardIDs.ROOT)
+        }
     }
 }

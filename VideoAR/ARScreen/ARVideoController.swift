@@ -28,10 +28,11 @@ class ARVideoController: UIViewController {
         super.viewWillAppear(animated)
         if ARConfiguration.isSupported {
             // Create a session configuration
-            let configuration = ARWorldTrackingConfiguration()
+            let configuration = ARImageTrackingConfiguration()
+            let options: ARSession.RunOptions = [.resetTracking, .removeExistingAnchors]
             loadDynamicImageReferences(configuration: configuration)
             // Run the view's session
-            sceneView.session.run(configuration)
+            sceneView.session.run(configuration, options: options)
         }
     }
     
@@ -45,7 +46,7 @@ class ARVideoController: UIViewController {
 extension ARVideoController: ARSCNViewDelegate {
     
     /// Create ARReference Images From Somewhere Other Than The Default Folder
-    func loadDynamicImageReferences(configuration: ARWorldTrackingConfiguration){
+    func loadDynamicImageReferences(configuration: ARImageTrackingConfiguration){
         
         //1. Get The Image From The Folder
         guard let imageUrl = Assests.getImgUrl(),
@@ -66,7 +67,8 @@ extension ARVideoController: ARSCNViewDelegate {
         arImage.name = "CGImage Test"
         
         //5. Set The ARWorldTrackingConfiguration Detection Images
-        configuration.detectionImages = [arImage]
+        configuration.maximumNumberOfTrackedImages = 1
+        configuration.trackingImages = [arImage]
     }
     
     
@@ -100,7 +102,7 @@ extension ARVideoController: ARSCNViewDelegate {
         
         //4. Create Our Video Player
         if let videoURL = Assests.getVidUrl(){
-            setupVideoOnNode(videoHolder, fromURL: videoURL)
+            setupVideoOnNode(videoHolder, fromURL: videoURL, width: width, height: height)
         }
         
         //5. Add It To The Hierarchy
@@ -112,7 +114,9 @@ extension ARVideoController: ARSCNViewDelegate {
     /// - Parameters:
     ///   - node: SCNNode
     ///   - url: URL
-    func setupVideoOnNode(_ node: SCNNode, fromURL url: URL){
+    ///   - width: CGFloat
+    ///   - height: CGFloat
+    func setupVideoOnNode(_ node: SCNNode, fromURL url: URL, width: CGFloat, height: CGFloat){
         
         //1. Create An SKVideoNode
         var videoPlayerNode: SKVideoNode!
@@ -125,7 +129,7 @@ extension ARVideoController: ARSCNViewDelegate {
         videoPlayerNode.yScale = -1
         
         //4. Create A SpriteKitScene & Postion It
-        let spriteKitScene = SKScene(size: CGSize(width: 600, height: 300))
+        let spriteKitScene = SKScene(size: CGSize(width: width, height: height))
         spriteKitScene.scaleMode = .aspectFit
         videoPlayerNode.position = CGPoint(x: spriteKitScene.size.width/2, y: spriteKitScene.size.height/2)
         videoPlayerNode.size = spriteKitScene.size

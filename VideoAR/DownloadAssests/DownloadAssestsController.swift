@@ -16,6 +16,7 @@ class DownloadAssestsController: UITableViewController {
     
     lazy var db = Firestore.firestore()
     var dataSource = [QueryDocumentSnapshot]()
+    lazy var name = Auth.auth().currentUser?.email?.split(separator: "@").first
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,11 +54,13 @@ extension DownloadAssestsController {
     
     // Fetch list of users of our app
     private func fetchUsers() {
-        db.collection("users").getDocuments() { (querySnapshot, err) in
+        db.collection("users").getDocuments(){ (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                self.dataSource = querySnapshot!.documents
+                self.dataSource = querySnapshot!.documents.filter({ (doc) -> Bool in
+                    doc.data()["name"] as! String != self.name!
+                })
             }
             self.tableView.reloadData()
         }
