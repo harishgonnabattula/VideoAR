@@ -29,10 +29,10 @@ class ARVideoController: UIViewController {
         if ARConfiguration.isSupported {
             // Create a session configuration
             let configuration = ARWorldTrackingConfiguration()
-            //let options: ARSession.RunOptions = [.resetTracking, .removeExistingAnchors]
             loadDynamicImageReferences(configuration: configuration)
             // Run the view's session
-            sceneView.session.run(configuration)
+            sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+            
         }
     }
     
@@ -61,7 +61,7 @@ extension ARVideoController: ARSCNViewDelegate {
         }
         
         //4. Create An ARReference Image (Remembering Physical Width Is In Metres)
-        let arImage = ARReferenceImage(cgImage, orientation: CGImagePropertyOrientation.up, physicalWidth: CGFloat(cgImage.width))
+        let arImage = ARReferenceImage(cgImage, orientation: CGImagePropertyOrientation.up, physicalWidth: 0.3)
         
         //5. Name The Image
         arImage.name = "CGImage Test"
@@ -99,6 +99,7 @@ extension ARVideoController: ARSCNViewDelegate {
         
         //4. Create Our Video Player
         if let videoURL = Assests.getVidUrl(){
+            
             setupVideoOnNode(videoHolder, fromURL: videoURL)
         }
         
@@ -130,7 +131,7 @@ extension ARVideoController: ARSCNViewDelegate {
         
         //5. Play The Video
         videoPlayerNode.play()
-        videoPlayer.volume = 0
+        videoPlayer.volume = 1
         
     }
 }
