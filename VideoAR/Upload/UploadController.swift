@@ -30,11 +30,6 @@ class UploadController: UIViewController {
         super.viewDidAppear(animated)
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        view.viewWithTag(99)?.isHidden = true
-        view.viewWithTag(100)?.isHidden = true
-        self.upoadVideoButton.isEnabled = false
-    }
     
     @IBAction func imageUpload(_ sender: UIButton) {
         self.view.viewWithTag(99)?.isHidden = true

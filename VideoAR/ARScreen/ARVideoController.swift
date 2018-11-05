@@ -20,7 +20,7 @@ class ARVideoController: UIViewController {
         sceneView.delegate = self
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-        sceneView.automaticallyUpdatesLighting = true
+        //sceneView.automaticallyUpdatesLighting = true
     
     }
     
@@ -28,11 +28,11 @@ class ARVideoController: UIViewController {
         super.viewWillAppear(animated)
         if ARConfiguration.isSupported {
             // Create a session configuration
-            let configuration = ARImageTrackingConfiguration()
-            let options: ARSession.RunOptions = [.resetTracking, .removeExistingAnchors]
+            let configuration = ARWorldTrackingConfiguration()
+            //let options: ARSession.RunOptions = [.resetTracking, .removeExistingAnchors]
             loadDynamicImageReferences(configuration: configuration)
             // Run the view's session
-            sceneView.session.run(configuration, options: options)
+            sceneView.session.run(configuration)
         }
     }
     
@@ -46,7 +46,7 @@ class ARVideoController: UIViewController {
 extension ARVideoController: ARSCNViewDelegate {
     
     /// Create ARReference Images From Somewhere Other Than The Default Folder
-    func loadDynamicImageReferences(configuration: ARImageTrackingConfiguration){
+    func loadDynamicImageReferences(configuration: ARWorldTrackingConfiguration){
         
         //1. Get The Image From The Folder
         guard let imageUrl = Assests.getImgUrl(),
@@ -67,15 +67,11 @@ extension ARVideoController: ARSCNViewDelegate {
         arImage.name = "CGImage Test"
         
         //5. Set The ARWorldTrackingConfiguration Detection Images
-        configuration.maximumNumberOfTrackedImages = 1
-        configuration.trackingImages = [arImage]
+        configuration.detectionImages = [arImage]
+        
     }
     
-    
-    /// Converts A CIImage To A CGImage
-    ///
-    /// - Parameter inputImage: CIImage
-    /// - Returns: CGImage
+
     func convertCIImageToCGImage(inputImage: CIImage) -> CGImage? {
         let context = CIContext(options: nil)
         if let cgImage = context.createCGImage(inputImage, from: inputImage.extent) {
@@ -85,6 +81,7 @@ extension ARVideoController: ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        
         //1. Check We Have An ARImageAnchor And Have Detected Our Reference Image
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
         
@@ -102,21 +99,14 @@ extension ARVideoController: ARSCNViewDelegate {
         
         //4. Create Our Video Player
         if let videoURL = Assests.getVidUrl(){
-            setupVideoOnNode(videoHolder, fromURL: videoURL, width: width, height: height)
+            setupVideoOnNode(videoHolder, fromURL: videoURL)
         }
         
         //5. Add It To The Hierarchy
         node.addChildNode(videoHolder)
     }
     
-    /// Creates A Video Player As An SCNGeometries Diffuse Contents
-    ///
-    /// - Parameters:
-    ///   - node: SCNNode
-    ///   - url: URL
-    ///   - width: CGFloat
-    ///   - height: CGFloat
-    func setupVideoOnNode(_ node: SCNNode, fromURL url: URL, width: CGFloat, height: CGFloat){
+    func setupVideoOnNode(_ node: SCNNode, fromURL url: URL){
         
         //1. Create An SKVideoNode
         var videoPlayerNode: SKVideoNode!
@@ -129,7 +119,7 @@ extension ARVideoController: ARSCNViewDelegate {
         videoPlayerNode.yScale = -1
         
         //4. Create A SpriteKitScene & Postion It
-        let spriteKitScene = SKScene(size: CGSize(width: width, height: height))
+        let spriteKitScene = SKScene(size: CGSize(width: 600, height: 300))
         spriteKitScene.scaleMode = .aspectFit
         videoPlayerNode.position = CGPoint(x: spriteKitScene.size.width/2, y: spriteKitScene.size.height/2)
         videoPlayerNode.size = spriteKitScene.size
@@ -140,6 +130,7 @@ extension ARVideoController: ARSCNViewDelegate {
         
         //5. Play The Video
         videoPlayerNode.play()
-        videoPlayer.volume = 1.0
+        videoPlayer.volume = 0
+        
     }
 }
